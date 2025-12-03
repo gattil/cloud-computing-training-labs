@@ -113,8 +113,8 @@ This training takes you on a progressive journey from traditional programming to
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/cloud-training-labs.git
-cd cloud-training-labs
+git clone https://github.com/gattil/Cloud-Computing-Training-Labs.git
+cd Cloud-Computing-Training-Labs
 
 # 2. Set up Python environment
 python -m venv venv
