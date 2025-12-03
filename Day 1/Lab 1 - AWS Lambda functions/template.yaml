@@ -1,0 +1,40 @@
+# AWS SAM (Serverless Application Model) template
+# This file defines the infrastructure needed to run your Lambda function
+# SAM is a simplified way to define serverless applications on AWS
+
+# CloudFormation template version (standard AWS format)
+AWSTemplateFormatVersion: '2010-09-09'
+
+# Transform tells CloudFormation to use SAM syntax
+# This enables simplified serverless resource definitions
+Transform: AWS::Serverless-2016-10-31
+
+# Resources section defines the AWS services your application needs
+Resources:
+  # Define a Lambda function resource
+  # 'FastaValidatorFunction' is the logical name for this resource
+  FastaValidatorFunction:
+    # Type specifies this is a serverless function (Lambda)
+    Type: AWS::Serverless::Function
+    
+    # Properties configure how the Lambda function should be set up
+    Properties:
+      # Handler points to the function AWS should call
+      # Format: filename.function_name
+      # This means: call lambda_handler() function in lambda_function.py
+      Handler: lambda_function.lambda_handler
+      
+      # Runtime specifies which Python version to use
+      # Must match the Python version you're developing with
+      Runtime: python3.12
+      
+      # CodeUri tells SAM where to find your source code
+      # '.' means current directory (where this template.yaml file is located)
+      CodeUri: .
+      
+      # Optional properties you could add:
+      # Timeout: 30                    # Function timeout in seconds
+      # MemorySize: 128               # Memory allocation in MB
+      # Environment:                  # Environment variables
+      #   Variables:
+      #     ENV_VAR: value

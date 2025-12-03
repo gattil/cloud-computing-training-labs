@@ -1,0 +1,5 @@
+# pytest: Testing framework for Python
+# Automatically discovers and runs functions that start with 'test_'
+# Provides detailed error messages when tests fail
+# Version 9.0.1 is the latest stable version with good Lambda testing support
+pytest==9.0.1

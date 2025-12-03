@@ -1,0 +1,8 @@
+# Flask: Web framework for creating REST APIs and web services
+# Version 2.3.3 is stable and well-tested
+Flask==2.3.3
+
+# Gunicorn: Production-ready WSGI HTTP server
+# Replaces Flask's built-in development server for production use
+# Handles multiple requests efficiently and provides better performance
+gunicorn==21.2.0
